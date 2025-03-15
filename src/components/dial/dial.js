@@ -1,3 +1,4 @@
+
 class CustoDial extends HTMLElement {
     constructor() {
         super();
@@ -32,7 +33,7 @@ class CustoDial extends HTMLElement {
                     display: flex;
                     align-items: center;
                     gap: 10px;
-                    background: #000;
+                    background: rgba(217, 0, 255, 0.1);
                     padding: 10px;
                     border-radius: 10px;
                 }
@@ -44,7 +45,7 @@ class CustoDial extends HTMLElement {
                     align-items: center;
                     justify-content: center;
                     color: white;
-                    font-size: 16px;
+                    font-size: 12px;
                     cursor: pointer;
                     border-radius: 50%;
                     transition: background 0.3s, transform 0.2s;
@@ -58,7 +59,7 @@ class CustoDial extends HTMLElement {
                 }
 
                 .page-number:hover {
-                    background: rgba(255, 255, 255, 0.3);
+                    background: rgba(68, 0, 203, 0.3);
                 }
             </style>
             <div class="pagination">
@@ -71,3 +72,4 @@ class CustoDial extends HTMLElement {
 }
 
 customElements.define("custom-dial", CustoDial);
+export default CustoDial; 
