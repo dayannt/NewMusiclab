@@ -1,7 +1,7 @@
-import "./card.js";
-import getCards from "./getcards.js";
+import Card from "./Card.js"; 
+import getCards from "./getcards.js"; 
 
-class CommentContainer extends HTMLElement {
+class CardContainer extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -12,9 +12,9 @@ class CommentContainer extends HTMLElement {
     }
 
     async render() {
-        const cards = await getComments();
+        const cards = getCards(); 
 
-        console.log("✅ Datos obtenidos de getCards():", comment ); //
+        console.log(" Datos obtenidos de getCards():", cards); 
 
         this.shadowRoot.innerHTML = `
             <style>
@@ -33,21 +33,19 @@ class CommentContainer extends HTMLElement {
                 }
             </style>
             <div class="grid-noticias">
-                ${comments.map(comment => `
-                    <news-card 
-                        categoria="${comment.categoria}"
-                        titulo="${comment.titulo}"
+                ${cards.map(card => `
+                    <card-element 
+                        titulo="${card.titulo}"
                         descripcion="${card.descripcion}"
-                        autor="${comment.autor}"
-                        fecha="${comment.fecha}"
-                        imagen-src="${comment["imagen-src"]}"
-                        imagen-perfil="${comment["imagen-perfil"]}"
-                    ></news-comments>
+                        autor="${card.autor}"
+                        fecha="${card.fecha}"
+                        imagen-perfil="${card["imagen-perfil"]}"
+                    ></card-element>
                 `).join("")}
             </div>
         `;
     }
 }
 
-customElements.define("comment-container", CommentContainer);
-export default CommentContainer;
+customElements.define("card-container", CardContainer);
+export default CardContainer;
