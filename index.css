@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at 30% 30%, #0e002a, #2a0055, #6d00a8, #ce00ff);
+    color: #e0e0e0;
+}
+
+#titulos {
+    padding: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+#titulos h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+#titulos h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-top: 20px;    
+    margin-right: 270px;  
+    margin-bottom: 20px; 
+    margin-left: 270px;   
+
+    
+
+    
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(163, 76, 76, 0.05) 0%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+    z-index: 999;
+}
