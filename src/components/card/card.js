@@ -1,4 +1,4 @@
-class NewsCard extends HTMLElement {
+class Card extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -26,13 +26,16 @@ class NewsCard extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 .tarjeta-noticia {
-                    width: 320px;
-                    margin: 15px;
+                    width: 450px;
+                    height: 250px;
+                    margin: 5px;
+                    padding: 10px;
+                    
                     border-radius: 10px;
                     overflow: hidden;
-                    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+                    box-shadow: 4px 4px 15px rgba(0, 188, 125, 0.56);
                     transition: transform 0.3s ease-in-out;
-                    background: #fff;
+                    background: rgba(197, 193, 193, 0.71); 
                 }
                 .tarjeta-noticia:hover {
                     transform: scale(1.05);
@@ -43,11 +46,11 @@ class NewsCard extends HTMLElement {
                 .contenido-noticia h2 {
                     font-size: 1.2em;
                     margin: 0;
-                    color: #333;
+                    color: #ffff;
                 }
                 .contenido-noticia p {
                     font-size: 0.9em;
-                    color: #666;
+                    color: #000;
                     margin: 10px 0;
                 }
                 .fecha-noticia {
@@ -64,6 +67,7 @@ class NewsCard extends HTMLElement {
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
+                    padding: 15px;
                 }
             </style>
             <div class="tarjeta-noticia">
@@ -81,5 +85,5 @@ class NewsCard extends HTMLElement {
     }
 }
 
-customElements.define("news-card", NewsCard);
-export default NewsCard;
+
+export default Card;
